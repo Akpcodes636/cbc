@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Days+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Days+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  } */
+/* } */
+
+body {
+  /* color: var(--foreground);
+  background: var(--background); */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* font-family: "Nunito Sans", sans-serif; */
+}
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../public/clays.jpg");
+  background-color: #807c7c;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.logo-ticker-image {
+  @apply h-8 w-auto;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+  filter: brightness(0);
+  opacity: 50%;
+}
+.logos img {
+  height: 3.2rem;
+}
+html {
+  /* font-size: 10px */
+  /* 10px / 16px - 0.6255% */
+  /* Percentage of user's browser font setting */
+  font-size: 92.5%;
+
+  overflow-x: hidden;
+  /* Doesnt work on Sarafai and microsoft edge */
+  /* scroll-behavior: smooth; */
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 66.25%;
+  }
+}
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px */
+    font-size: 80%;
+  }
+}
