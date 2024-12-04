@@ -3,23 +3,29 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { IoMenuSharp } from "react-icons/io5";
+import { IoMenuSharp, IoCloseOutline } from "react-icons/io5";
 import Button from "../app/ui/Button";
 
 export default function Header() {
   const [openMenu, setIsOpenMenu] = useState(false);
 
+  // Function to close the menu
+  const closeMenu = () => {
+    setIsOpenMenu(false);
+  };
+
   return (
     <>
       {/* Announcement Bar */}
-      <div className="flex items-center justify-center h-8 bg-black fixed top-0 bottom-0 w-full z-50">
-        <p className="text-white font-raleway">Get started its free &rarr;</p>
+      <div className="flex items-center justify-center h-8 bg-black fixed top-0 left-0 right-0 z-50">
+        <p className="text-white font-raleway text-sm">
+          Get started - it's free &rarr;
+        </p>
       </div>
 
       {/* Main Header */}
       <header className="fixed bg-white top-8 w-full z-50 h-[5.6rem] shadow-lg">
-        <div className="max-w-full container-sm mx-auto px- h-full flex items-center justify-between p-4">
-          {/* max-w-full */}
+        <div className="max-w-full container-sm mx-auto px-4 h-full flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="relative">
             <Image
@@ -73,49 +79,76 @@ export default function Header() {
             className="md:hidden"
             onClick={() => setIsOpenMenu(!openMenu)}
           >
-            <IoMenuSharp className="w-6 h-6 text-black" />
+            {openMenu ? (
+              <IoCloseOutline className="w-8 h-8 text-black" />
+            ) : (
+              <IoMenuSharp className="w-8 h-8 text-black" />
+            )}
           </button>
         </div>
       </header>
 
       {/* Mobile Menu */}
       {openMenu && (
-        <div className="fixed inset-0 bg-white z-20 mt-[7.6rem] md:hidden flex items-center justify-center">
-          <nav className="flex flex-col items-center gap-8 pt-40 justify-center">
-            <Link
-              href="/"
-              className="font-sans text-6xl hover:text-blue-500 transition duration-150"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="font-sans text-6xl hover:text-blue-500 transition duration-150"
-            >
-              About
-            </Link>
-            <Link
-              href="/events"
-              className="font-sans text-6xl hover:text-blue-500 transition duration-150"
-            >
-              Events
-            </Link>
+        <div
+          className="fixed inset-0 bg-white z-40 md:hidden overflow-hidden animate-fade-in"
+          style={{
+            top: "7.6rem",
+            height: "calc(100vh - 7.6rem)",
+            backdropFilter: "blur(10px)",
+            backgroundColor: "rgba(255, 255, 255, 0.95)",
+          }}
+        >
+          <nav className="flex flex-col items-center justify-center h-full space-y-8 px-6">
+            <div className="space-y-8 text-center">
+              <Link
+                href="/"
+                onClick={closeMenu}
+                className="block font-bold text-4xl text-gray-800 hover:text-blue-600 transition duration-300 transform hover:scale-105"
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                onClick={closeMenu}
+                className="block font-bold text-4xl text-gray-800 hover:text-blue-600 transition duration-300 transform hover:scale-105"
+              >
+                About
+              </Link>
+              <Link
+                href="/events"
+                onClick={closeMenu}
+                className="block font-bold text-4xl text-gray-800 hover:text-blue-600 transition duration-300 transform hover:scale-105"
+              >
+                Events
+              </Link>
+              <Link
+                href="/blog"
+                onClick={closeMenu}
+                className="block font-bold text-4xl text-gray-800 hover:text-blue-600 transition duration-300 transform hover:scale-105"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/contact"
+                onClick={closeMenu}
+                className="block font-bold text-4xl text-gray-800 hover:text-blue-600 transition duration-300 transform hover:scale-105"
+              >
+                Contact
+              </Link>
+            </div>
 
             <Link
-              href="/blog"
-              className="font-sans text-6xl hover:text-blue-500 transition duration-150"
+              href="https://bit.ly/cbcamptg"
+              onClick={closeMenu}
+              className="w-full"
             >
-              Blog
+              <div className="flex items-center justify-center">
+                <Button className="font-heading text-white px-12 py-4 rounded-full text-2xl bg-blue-600 hover:bg-blue-700 transition duration-300 shadow-lg">
+                  Join us
+                </Button>
+              </div>
             </Link>
-            <Link
-              href="/contact"
-              className="font-sans text-6xl hover:text-blue-500 transition duration-150"
-            >
-              Contact
-            </Link>
-            <Button className="font-heading text-white px-6 py-2 rounded transition duration-150 text-6xl">
-              <Link href="https://bit.ly/cbcamptg">Join us</Link>
-            </Button>
           </nav>
         </div>
       )}

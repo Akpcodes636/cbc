@@ -11,6 +11,7 @@ import RegistrationModal from "@/app/ui/openModal";
 import { useEventModalStore } from "@/zustand/store";
 import { writeClient } from "@/app/lib/write-client";
 import Back from "@/components/back";
+import { Link } from "lucide-react";
 
 // Create image URL builder
 const builder = imageUrlBuilder(client);
@@ -212,7 +213,7 @@ const EventPage = () => {
           <div
             className="h-[50vh] sm:h-[50vh] flex flex-col justify-center items-center"
             style={{
-              background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${urlFor(event.image?.asset) || "/three.jpg"})`,
+              background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${urlFor(event.image?.asset) || "/img13.jpg"})`,
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
               backgroundSize: "cover",
@@ -263,13 +264,15 @@ const EventPage = () => {
             {/* Registration Button */}
             <div className="mt-5">
               {event ? (
-                <button
+                <Link
+                  disabled
                   // onClick={(openModal) => setShowRegistrationModal(!openModal)}
-                  onClick={showModal}
+                  href={`YOUR_GOOGLE_FORM_LINK_FOR_${event.slug?.current}`}
+                  target="_blank"
                   className="btn-view-event w-36 h-10 font-bold text-white bg-[#005effdd] border-none rounded-md px-4 py-2 cursor-pointer inline-block text-center"
                 >
                   Register Now
-                </button>
+                </Link>
               ) : (
                 <button
                   disabled

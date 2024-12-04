@@ -91,6 +91,8 @@ const Brands = () => {
         <Image
           src={logo.imagePath}
           alt={logo.alt}
+          width={500}
+          height={500}
           className="w-full h-full object-contain group-hover:opacity-100 opacity-50 transition-opacity"
         />
       ) : (

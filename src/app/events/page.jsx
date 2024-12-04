@@ -14,7 +14,7 @@ export default function EventsPage() {
       <div
         className="h-[50vh] sm:h-[50vh] flex flex-col"
         style={{
-          background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/three.jpg')`,
+          background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img13.jpg')`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
