@@ -7,6 +7,7 @@ import Gallery from "@/components/gallery";
 import Events from "@/components/Events";
 import Services from "@/components/services";
 import Contact from "@/components/contact";
+import Blog from "@/components/blog";
 // import { client } from "../app/lib/sanity-client";
 import { client } from "../sanity/lib/client";
 import { groq } from "next-sanity";
@@ -27,6 +28,7 @@ export default async function Home() {
       <Brands />
       <About />
       <Achievements />
+      <Blog />
       <Gallery />
       <Events />
       <Services />

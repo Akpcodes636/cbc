@@ -1,11 +1,13 @@
 import { groq } from "next-sanity";
-import { Post } from "/type.jsx";
 import { client, urlFor } from "../../../sanity/lib/client";
 import Link from "next/link";
 import Image from "next/image";
-import RichText from "../../../components/RichText";
 import { PortableText } from "@portabletext/react";
 import { notFound } from "next/navigation";
+import BlogCard from "@/app/ui/BlogCard";
+import imageUrlBuilder from "@sanity/image-url";
+
+const builder = imageUrlBuilder(client);
 
 const capitalizeWords = (str) => {
   return str
@@ -14,23 +16,24 @@ const capitalizeWords = (str) => {
     .join(" ");
 };
 
+// Fetch other posts query
+const otherPostsQuery = groq`*[_type == 'post' && slug.current != $slug]{
+  _id,
+  title,
+  slug,
+  mainImage,
+  description,
+  _createdAt,
+  categories[]->,
+  author->
+} | order(_createdAt desc)[0...4]`;
+
 const SlugPage = async ({ params: { slug } }) => {
   const currentPostQuery = groq`*[_type == 'post' && slug.current == $slug][0]{
     ...,
     body,
     author->
   }`;
-
-  const otherPostsQuery = groq`*[_type == 'post' && slug.current != $slug]{
-    _id,
-    title,
-    slug,
-    mainImage,
-    description,
-    _createdAt,
-    categories[]->,
-    author->
-  } | order(_createdAt desc)[0...4]`;
 
   // Custom RichText components
   const RichTextComponents = {
@@ -93,101 +96,23 @@ const SlugPage = async ({ params: { slug } }) => {
         </div>
 
         {/* Post Body */}
-        <div className="px-8">
+        <div className="px-8 container-sm mx-auto">
           <PortableText value={post?.body} components={RichTextComponents} />
         </div>
 
         {/* Read More Section */}
-        <h1 className="text-2xl font-bold mt-8 mb-4">Read More</h1>
-        <BlogPost posts={otherPosts} />
+        <div className="px-4 mt-16 container-sm mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-[#005effdd] border-b pb-2">
+            More Articles You Might Like
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {otherPosts.map((p) => (
+              <BlogCard key={p._id} post={p} />
+            ))}
+          </div>
+        </div>
       </div>
     </>
-  );
-};
-
-const BlogPost = ({ posts }) => {
-  if (!posts || posts.length === 0) {
-    return <p>No additional posts available.</p>;
-  }
-
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="flex items-center justify-center flex-wrap gap-8">
-        {posts.map((post) => {
-          const slug = post?.slug?.current || "";
-          const createdAt = post?._createdAt || "";
-          const mainImageUrl = post?.mainImage
-            ? urlFor(post.mainImage).url()
-            : "/placeholder.jpg";
-          const category =
-            typeof post?.categories?.[0] === "object"
-              ? post.categories[0].title
-              : "Marketing";
-          const authorImage = post?.author?.image
-            ? urlFor(post.author.image).url()
-            : "/vision.jpg";
-          const authorName =
-            typeof post?.author?.name === "string"
-              ? post.author.name
-              : "Anonymous";
-
-          return (
-            <Link key={post?._id} href={`/post/${slug}`} className="group">
-              <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 h-[400px] w-[350px]">
-                <div className="relative h-48 w-full overflow-hidden">
-                  <Image
-                    src={mainImageUrl}
-                    alt={post?.title || "Blog Post"}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center text-sm text-gray-500 mb-4">
-                    <time dateTime={createdAt}>
-                      {createdAt
-                        ? new Date(createdAt).toLocaleDateString("en-US", {
-                            day: "numeric",
-                            month: "long",
-                            year: "numeric",
-                          })
-                        : "Date Not Available"}
-                    </time>
-                    <span className="mx-2">•</span>
-                    <span className="bg-gray-100 px-2 py-1 rounded-full">
-                      {category}
-                    </span>
-                  </div>
-
-                  <h2 className="text-xl font-semibold mb-3 group-hover:text-[#005effdd]">
-                    {typeof post?.title === "string"
-                      ? post.title
-                      : "Untitled Post"}
-                  </h2>
-
-                  <p className="text-gray-600 line-clamp-3 mb-4">
-                    {post?.description}
-                  </p>
-
-                  <div className="flex items-center space-x-4">
-                    <Image
-                      src={authorImage}
-                      alt={authorName}
-                      width={500}
-                      height={500}
-                      className="rounded-full w-7 h-7"
-                    />
-                    <span className="font-medium dark:text-white">
-                      {authorName}
-                    </span>
-                  </div>
-                </div>
-              </article>
-            </Link>
-          );
-        })}
-      </div>
-    </div>
   );
 };
 

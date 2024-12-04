@@ -50,11 +50,11 @@ const services = [
 export default function Services() {
   return (
     <section className="">
-      <div className="py-30 container mx-auto">
+      <div className="py-30 container-sm mx-auto">
         <h2 className="font-days-one  text-[#005effdd] text-center text-[2.4rem] py-20">
           Our Services
         </h2>
-        <div className="grid-container grid grid-cols-1 md:grid-cols-3 gap-8 p-8 bg-white">
+        <div className="grid-container grid grid-cols-1 md:grid-cols-3 gap-8 p-4 lg:p-8 bg-white">
           {services.map((service, index) => (
             <div
               key={index}

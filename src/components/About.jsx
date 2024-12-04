@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <section className="min-h-screen py-24">
-      <div className="container mx-auto px-3 md:px-4 lg:px-8">
+      <div className="container-sm mx-auto px-3 md:px- lg:px-">
         <div className="mb-32">
           <span className="text-lg font-bold mb-1 text-left font-days-one uppercase text-[#005effdd]">
             About Us
@@ -17,7 +17,7 @@ export default function About() {
             blockchain and web3 industry.
           </h3>
         </div>
-        <div className="container">
+        <div className="">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16">
             {/* Vision Section */}
             <div className="order-2 md:order-1">

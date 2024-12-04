@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Achievements() {
   return (
-    <section className="min-h-14 py-24 bg-[#005effdd]">
-      <div className="container mx-auto px-3 md:px-4 lg:px-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
+    <section className="min-h-14 py-24 bg-blue-400 text-white">
+      <div className="container-sm mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
         <div>
           <h1 className="text-5xl font-bold font-days-one mb-3">500+</h1>
           <h3 className="font-inter text-2xl mb-1">Students</h3>

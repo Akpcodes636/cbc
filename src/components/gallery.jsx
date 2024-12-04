@@ -4,12 +4,12 @@ import Image from "next/image";
 export default function Gallery() {
   return (
     <section className="py-24">
-      <div className="grid grid-cols-1 md:grid-cols-[55fr_45fr] lg:[grid-cols-[55fr_45fr]] py-24 px-3 container mx-auto items-center">
+      <div className="grid grid-cols-1 md:grid-cols-[55fr_45fr] lg:[grid-cols-[55fr_45fr]] py-24 px-3 container-sm mx-auto items-center">
         <div>
           <h1 className="text-[2.4rem] font-days-one text-[#005effdd]">
             Our Community's Moments
           </h1>
-          <p className="text-[1.1rem] font-inter leading-9">
+          <p className="text-[1.1rem] font-inter leading-9 mb-6">
             Our team brings nearly a decade of expertise in the blockchain and
             digital assets industry.We have organized high-impact events across
             various African cities and countries.In 2022, we received the

@@ -29,9 +29,11 @@ export default function RootLayout({ children }) {
         text-foreground
       `}
       >
-        <Header />
-        {children}
-        <Footer />
+        <div>
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

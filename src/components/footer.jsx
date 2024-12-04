@@ -11,15 +11,15 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-white dark:bg-gray-900">
-      <div className="w-full p-4 py-6 lg:py-8 container mx-auto">
+    <footer className="bg-white">
+      <div className="w-full p-4 py-6 lg:py-8 container-sm mx-auto">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="flex items-center">
               {" "}
               <Image
                 src="/logo.png"
-                className="w-[40px] h-[40px] md:w-[80px] md:h-[80px] lg:w-full lg:h-full"
+                className="w-1/3 md:w-1/2 lg:w-full "
                 alt="cryptoWeb3 Logo"
                 width={500}
                 height={500}
@@ -32,16 +32,16 @@ export default function Footer() {
                 Resources
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <Link href="/" className="hover:underline">
+                <div className="mb-4">
+                  <Link href="/about" className="hover:underline">
                     About
                   </Link>
-                </li>
-                <li>
-                  <Link href="/" className="hover:underline">
+                </div>
+                <div>
+                  <Link href="/contact" className="hover:underline">
                     Contacts
                   </Link>
-                </li>
+                </div>
               </ul>
             </div>
             <div>
@@ -49,16 +49,44 @@ export default function Footer() {
                 Follow us
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <Link href="/" className="hover:underline">
-                    facebook
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" className="hover:underline">
-                    instagram
-                  </Link>
-                </li>
+                <div className="mb-4">
+                  <div>
+                    <Link href="https://bit.ly/cbcamplinkedin">Linkedin</Link>
+                  </div>
+                  <div>
+                    <Link
+                      href="https://bit.ly/cbcampfacebook"
+                      className="hover:underline"
+                    >
+                      facebook
+                    </Link>
+                  </div>
+
+                  <div>
+                    <Link
+                      href="https://bit.ly/cbcamptwitter"
+                      className="hover:underline"
+                    >
+                      Twitter
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      href="https://bit.ly/cbcamptg"
+                      className="hover:underline"
+                    >
+                      Telegram
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      href="/https://bit.ly/cbcampinsta"
+                      className="hover:underline"
+                    >
+                      instagram
+                    </Link>
+                  </div>
+                </div>
               </ul>
             </div>
             <div>
@@ -66,16 +94,16 @@ export default function Footer() {
                 Legal
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
+                <div className="mb-4">
                   <Link href="/" className="hover:underline">
                     Privacy Policy
                   </Link>
-                </li>
-                <li>
+                </div>
+                <div>
                   <Link href="/" className="hover:underline">
                     Terms & Conditions
                   </Link>
-                </li>
+                </div>
               </ul>
             </div>
           </div>

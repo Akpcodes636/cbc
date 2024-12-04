@@ -102,11 +102,11 @@ const Brands = () => {
 
   return (
     <section className="pt-[4.8rem] pb-[3rem]">
-      <div className="container mx-auto">
+      <div className="container-sm mx-auto">
         <h2 className="text-center text-[1.4rem] font-medium uppercase tracking-[0.75px] mb-[2.4rem]">
           As featured in
         </h2>
-        <div className="flex max-w-full justify-between   filter brightness-0 md:h-20 h-12">
+        <div className="flex max-w-full justify-between filter brightness-0  h-6 md:h-20">
           {logos.map((logo, index) => (
             <LogoItem key={index} logo={logo} />
           ))}
