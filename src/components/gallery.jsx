@@ -31,7 +31,7 @@ export default function Gallery() {
             <figure className="overflow-hidden">
               <Image
                 className="transition-transform duration-300 hover:scale-110  w-full h-full object-cover"
-                src="/img2.jpg"
+                src="/img10.jpg"
                 alt="images of cbc community"
                 width={500}
                 height={500}
@@ -91,10 +91,10 @@ export default function Gallery() {
                 height={500}
               />
             </figure>
-            <figure className="overflow-hidden">
+            {/* <figure className="overflow-hidden">
               <Image
                 className="transition-transform duration-300 hover:scale-110  w-full h-full object-cover"
-                src="/img13.jpg"
+                src="/img.jpg"
                 alt="images of cbc community"
                 width={500}
                 height={500}
@@ -108,7 +108,7 @@ export default function Gallery() {
                 width={500}
                 height={500}
               />
-            </figure>
+            </figure> */}
           </div>
         </div>
       </div>

@@ -101,7 +101,7 @@ const SlugPage = async ({ params: { slug } }) => {
         </div>
 
         {/* Read More Section */}
-        <div className="px-4 mt-16 container-sm mx-auto">
+        <div className="px-4 my-40 container-sm mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-[#005effdd] border-b pb-2">
             More Articles You Might Like
           </h2>

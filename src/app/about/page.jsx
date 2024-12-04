@@ -7,13 +7,15 @@ const TeamMember = ({ img, name, role, content, linked }) => {
     <div className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-white">
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <Image
-          src={img}
-          alt={name}
-          width={500}
-          height={500}
-          className="w-full h-80 object-cover object-center"
-        />
+        <div className="w-full overflow-hidden h-80">
+          <Image
+            src={img}
+            alt={name}
+            width={500}
+            height={500}
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
         <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <h3 className="text-2xl font-bold mb-1">{name}</h3>
           <p className="text-sm text-gray-200">{role}</p>
