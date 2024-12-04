@@ -14,7 +14,7 @@ export default function Gallery() {
             digital assets industry.We have organized high-impact events across
             various African cities and countries.In 2022, we received the
             Outstanding Crypto Community award from the South South Blockchain
-            Conference.
+            Conference..
           </p>
         </div>
         <div className="">
