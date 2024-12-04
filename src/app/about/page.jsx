@@ -1,6 +1,6 @@
 import React from "react";
 import { Linkedin } from "lucide-react";
-
+import Image from "next/image";
 // Team Member Component
 const TeamMember = ({ img, name, role, content, linked }) => {
   return (
