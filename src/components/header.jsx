@@ -19,7 +19,7 @@ export default function Header() {
       {/* Announcement Bar */}
       <div className="flex items-center justify-center h-8 bg-black fixed top-0 left-0 right-0 z-50">
         <p className="text-white font-raleway text-sm">
-          Get started - it's free &rarr;
+          Get started - it&apos;s free &rarr;
         </p>
       </div>
 
