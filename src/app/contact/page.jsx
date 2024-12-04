@@ -40,8 +40,8 @@ const ContactPage = () => {
             Contact Us
           </h1>
           <p className="max-w-4xl mx-auto text-gray-700 leading-relaxed text-lg font-light tracking-wide">
-            We're here to help and answer any question you might have. We look
-            forward to hearing from you!
+            We&apos;re here to help and answer any question you might have. We
+            look forward to hearing from you!
           </p>
         </section>
 

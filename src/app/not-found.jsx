@@ -19,7 +19,7 @@ export default function Custom404() {
           Page Not Found
         </h1>
         <p className="text-gray-600 mb-6">
-          Oops! The page you're looking for seems to have wandered off.
+          Oops! The page you&apos;re looking for seems to have wandered off.
         </p>
         <div className="flex justify-center">
           <button

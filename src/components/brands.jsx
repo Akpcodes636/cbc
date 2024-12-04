@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Brands = () => {
   const logos = [
@@ -87,7 +88,7 @@ const Brands = () => {
   const LogoItem = ({ logo }) => (
     <div className="flex-none w-24 md:w-58 lg:w-60 h-20 md:h-24 flex items-center justify-center group">
       {logo.type === "png" ? (
-        <img
+        <Image
           src={logo.imagePath}
           alt={logo.alt}
           className="w-full h-full object-contain group-hover:opacity-100 opacity-50 transition-opacity"

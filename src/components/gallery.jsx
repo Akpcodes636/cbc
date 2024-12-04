@@ -7,7 +7,7 @@ export default function Gallery() {
       <div className="grid grid-cols-1 md:grid-cols-[55fr_45fr] lg:[grid-cols-[55fr_45fr]] py-24 px-3 container-sm mx-auto items-center">
         <div>
           <h1 className="text-[2.4rem] font-days-one text-[#005effdd]">
-            Our Community's Moments
+            Our Community&apos;s Moments
           </h1>
           <p className="text-[1.1rem] font-inter leading-9 mb-6">
             Our team brings nearly a decade of expertise in the blockchain and

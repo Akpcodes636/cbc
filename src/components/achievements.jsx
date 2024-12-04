@@ -8,9 +8,9 @@ export default function Achievements() {
           <h1 className="text-5xl font-bold font-days-one mb-3">500+</h1>
           <h3 className="font-inter text-2xl mb-1">Students</h3>
           <p className="font-inter text-light">
-            We've successfully trained over 500 industry experts across various
-            career niches.When you're looking for top-tier talent, you'll find
-            they've trained with us.
+            We&apos;ve successfully trained over 500 industry experts across
+            various career niches.When you&apos;re looking for top-tier talent,
+            you&apos;ll find they&apos;ve trained with us.
           </p>
         </div>
         <div>
@@ -29,7 +29,7 @@ export default function Achievements() {
           <h3 className="font-inter text-2xl mb-1">Consistency</h3>
           <p className="font-inter text-light">
             Consistency is our hallmark. The Crypto Bootcamp Community is a
-            synonymous with excellency, professionalism, and skill.We've
+            synonymous with excellency, professionalism, and skill.We&apos;ve
             delivered our Bootcamp trainings without fail for four consecutive
             years, setting the standard for what it means to be consistent in
             this rapidly evolving industry.
