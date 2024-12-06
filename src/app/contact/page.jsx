@@ -46,7 +46,7 @@ const ContactPage = () => {
         </section>
 
         {/* Contact Content */}
-        <div className="grid md:grid-cols-2 gap-12 bg-white shadow-2xl rounded-2xl overflow-hidden">
+        <div className="grid md:grid-cols-2 gap-12 bg-white shadow-lg rounded-2xl overflow-hidden">
           {/* Contact Information */}
           <div className="bg-gradient-to-br from-blue-600 to-blue-400 text-white p-12 flex flex-col justify-center">
             <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>

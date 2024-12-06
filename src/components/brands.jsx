@@ -93,10 +93,10 @@ const Brands = () => {
           alt={logo.alt}
           width={500}
           height={500}
-          className="w-full h-full object-contain group-hover:opacity-100 opacity-50 transition-opacity"
+          className="w-full h-full object-contain hover:#005effdd opacity-50 transition-opacity"
         />
       ) : (
-        <div className="w-full p-2 brightness-90 opacity-50 md:h-24 h-16 group-hover:opacity-100 transition-opacity">
+        <div className="w-full p-2 brightness-90 opacity-50 md:h-24 h-16 transition-opacity">
           {logo.content}
         </div>
       )}
@@ -106,7 +106,7 @@ const Brands = () => {
   return (
     <section className="pt-[4.8rem] pb-[3rem]">
       <div className="container-sm mx-auto">
-        <h2 className="text-center text-[1.4rem] font-medium uppercase tracking-[0.75px] mb-[2.4rem]">
+        <h2 className="text-center text-[2rem] font-medium uppercase tracking-[0.75px] mb-[2.4rem]">
           As featured in
         </h2>
         <div className="flex max-w-full justify-between filter brightness-0  h-6 md:h-20">

@@ -48,7 +48,7 @@ const BlogCard = ({ post }) => {
         <Link
           href={`/post/[slug]`}
           as={`/post/${post?.slug?.current}`}
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 "
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#005effdd] rounded-lg hover:bg-blue-800 transition-all duration-300 ease-in-out"
         >
           Read more
           <svg

@@ -39,7 +39,7 @@ export default function Blog() {
   return (
     <section className="container-sm mx-auto">
       <div className="py-[3.5rem]">
-        <h2 className="text-center text-4xl font-bold font-days-one mb-6">
+        <h2 className="text-center text-[2rem] font-medium uppercase tracking-[0.75px] mb-[2.4rem]ext-center text-4xl font-days-one mb-6">
           Featured Blogs
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 relative">

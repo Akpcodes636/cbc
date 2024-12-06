@@ -9,9 +9,9 @@ export default function About() {
     <section className="min-h-screen py-24">
       <div className="container-sm mx-auto px-3 md:px- lg:px-">
         <div className="mb-32">
-          <span className="text-lg font-bold mb-1 text-left font-days-one uppercase text-[#005effdd]">
+          {/* <span className="text-lg font-bold mb-1 text-left font-days-one uppercase text-[#005effdd]">
             About Us
-          </span>
+          </span> */}
           <h3 className="text-base md:text-2xl lg:text-4xl font-bold font-inter leading-tight">
             Crypto Bootcamp is a one-stop solution for businesses in the
             blockchain and web3 industry.
@@ -24,10 +24,12 @@ export default function About() {
               <div className="h-14 w-14 flex items-center justify-center rounded-full mb-8 bg-[#005effdd]">
                 <HiOutlineLightBulb className="h-10 w-10 text-white" />
               </div>
-              <h5 className="text-2xl font-bold font-days-one">Our Vision</h5>
-              <p className="font-inter">
+              <h5 className="font-bold font-days-one text-[2.5rem] leading-7 mb-[1.2rem]">
+                Our Vision
+              </h5>
+              <p className="font-inter text-[1.2rem] font-light">
                 To establish a community of individuals with the knowledge and
-                resources to naviage and advance in blockchain and Web3
+                resources to navigate and advance in blockchain and Web3
                 globally, and carve out the right platform for people to connect
                 and access opportunities in emerging technologies
               </p>
@@ -56,8 +58,10 @@ export default function About() {
               <div className="h-14 w-14 flex items-center justify-center rounded-full mb-8 bg-[#005effdd]">
                 <BsBriefcase className="h-10 w-10 text-white" />
               </div>
-              <h5 className="text-2xl font-bold font-days-one">Our Mission</h5>
-              <p className="font-inter">
+              <h5 className="font-bold font-days-one text-[2.5rem] leading-7 mb-[1.2rem]">
+                Our Mission
+              </h5>
+              <p className="font-inter text-[1.2rem] font-light">
                 Our mission is to democratize access to crypto and web3
                 education, and foster a knowledge, supportive and engaged
                 community. and drive the continuous onboarding of informed and
@@ -71,9 +75,11 @@ export default function About() {
               <div className="h-14 w-14 flex items-center justify-center rounded-full mb-8 bg-[#005effdd]">
                 <FaHandshake className="h-10 w-10 text-white" />
               </div>
-              <h5 className="text-2xl font-bold font-days-one">Our Values</h5>
-              <ul className="font-inter space-y-2">
-                <li>
+              <h5 className="text-[2.5rem] l font-bold font-days-one leading-7 mb-[1.2rem]">
+                Our Values
+              </h5>
+              <ul className="font-inter space-y-2 text-[1.2rem] font-light">
+                <li className="font-light">
                   <span className="text-[#005effdd] font-semibold">
                     Excellence:{" "}
                   </span>
@@ -81,7 +87,7 @@ export default function About() {
                   services, setting the standard for professionalism and skill
                   in the blockchain and web3 industry
                 </li>
-                <li>
+                <li className="font-light">
                   <span className="text-[#005effdd] font-semibold">
                     Community & Inclusion:{" "}
                   </span>
@@ -89,7 +95,7 @@ export default function About() {
                   individuals and businesses can connect, learn, and grow
                   together within the blockchain ecosystem.
                 </li>
-                <li>
+                <li className="font-light">
                   <span className="text-[#005effdd] font-semibold">
                     Innovation:{" "}
                   </span>

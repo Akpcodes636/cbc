@@ -95,7 +95,7 @@ const BlogContent = () => {
                   typeof post?.author?.name === "string"
                     ? post.author.name
                     : "Anonymous";
-
+                  const descriptions = post?.description
                 return (
                   <Link
                     key={post?._id}
@@ -139,7 +139,7 @@ const BlogContent = () => {
                         </h2>
 
                         <p className="text-gray-600 line-clamp-3 mb-4">
-                          {post?.description}
+                          {descriptions}
                         </p>
 
                         <div className="flex items-center space-x-4">
