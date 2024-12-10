@@ -41,7 +41,7 @@ export default function Gallery() {
     },
     {
       name: "image-eight",
-      imagePath: "/img8.jpg",
+      imagePath: "/img9.jpg",
       alt: "community moments",
     },
   ];

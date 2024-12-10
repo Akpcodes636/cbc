@@ -12,10 +12,10 @@ const Back = () => {
   return (
     <div
       onClick={goBack}
-      className="flex gap-2 items-center w-fit cursor-pointer"
+      className="flex items-center space-x-2 text-gray-700 hover:text-gray-900 transition-colors duration-200 z-50 absolute top-36 left-4"
     >
       <BsArrowLeft size={22} />
-      <span>Back</span>
+      <span className="text-white">Back</span>
     </div>
   );
 };
