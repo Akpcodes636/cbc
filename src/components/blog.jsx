@@ -25,6 +25,7 @@ export default function Blog() {
       setLoading(true);
       try {
         const fetchedPosts = await client.fetch(querys);
+        console.log(fetchedPosts);
         if (fetchedPosts) setPosts(fetchedPosts);
       } catch (error) {
         console.log("Error fetching posts:", error);

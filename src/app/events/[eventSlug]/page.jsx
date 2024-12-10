@@ -210,6 +210,9 @@ const EventPage = () => {
 
       <div className="flex items-center mb-10">
         <div className="w-full">
+          <div className="z-50">
+            <Back />
+          </div>
           <div
             className="h-[50vh] sm:h-[50vh] flex flex-col justify-center items-center"
             style={{
@@ -231,7 +234,7 @@ const EventPage = () => {
           {/* Event Image */}
 
           {/* Event Details */}
-          <div className="single-content px-6 py-4">
+          <div className="single-content px-6 py-4 text-center">
             <h2 className="text-2xl text-[#005effdd]">
               {capitalizeWords(event.slug?.current || "Event Name")}
             </h2>
@@ -246,7 +249,7 @@ const EventPage = () => {
 
             {/* Location Details */}
             {event.location && (
-              <div className="mt-4">
+              <div className="mt-4 w-full text-center">
                 <h3 className="font-semibold">Location Details:</h3>
                 <p>{event.location.venue}</p>
                 <p>{`${event.location.address}, ${event.location.city}, ${event.location.state}, ${event.location.country}`}</p>

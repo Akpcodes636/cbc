@@ -6,6 +6,7 @@ import { PortableText } from "@portabletext/react";
 import { notFound } from "next/navigation";
 import BlogCard from "@/app/ui/BlogCard";
 import imageUrlBuilder from "@sanity/image-url";
+import Back from "@/components/back";
 
 const builder = imageUrlBuilder(client);
 
@@ -72,6 +73,7 @@ const SlugPage = async ({ params: { slug } }) => {
       <div className="py-2">
         {/* Post Header */}
         <div className="flex items-center mb-10">
+          <back />
           <div className="w-full">
             <div
               className="h-[50vh] sm:h-[50vh] flex flex-col"
